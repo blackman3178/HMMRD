@@ -1,0 +1,24 @@
+{
+  "name": "cocktail-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "sequelize": "^6.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackman3178/Cocktail-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackman3178/Cocktail-Blog/issues"
+  },
+  "homepage": "https://github.com/blackman3178/Cocktail-Blog#readme"
+}
