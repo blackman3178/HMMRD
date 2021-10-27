@@ -16,6 +16,10 @@ Comment.init (
             primaryKey: true,
             autoIncrement: true,
         },
+        comment: {
+            type: dataType.TEXT,
+            allowNull: false,
+        },
         popularity: {
             type: DataTypes.INTEGER,
         },
