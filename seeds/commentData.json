@@ -1,11 +1,64 @@
-[{
-    "popularity": 0,
-    "user_id": 1,
-    "drink_id": 1,
-    "comment": "this drink rules!"
-}, 
-{
+[
+    {
+        "popularity": 2,
+        "user_id": 1,
+        "drink_id": 1,
+        "comment": "These are pretty good! I think I would add more lime juice and tequila."
+    }, 
+    {
+        "popularity": 4,
+        "user_id": 2,
+        "drink_id": 2,
+        "comment": "I added grapefruit and orange bitters and a bit of pineapple juice."
+    }, 
+    {
+        "popularity": 3,
+        "user_id": 3,
+        "drink_id": 3,
+        "comment": "I added some simple syrup to make it a little sweeter, then not bad. If I make another will probably halve the lemon juice and see how it tastes."
+        }, 
+    {
+        "popularity": 6,
+        "user_id": 4,
+        "drink_id": 4,
+        "comment": "Tried the recipe! So refreshing! Fresh lime juice and a good tequila make this really delicious."
+    }, 
+    {
+        "popularity": 5,
+        "user_id": 5,
+        "drink_id": 5,
+        "comment": "This was pretty good, but it needed something. I did add simple syrup. Maybe I will try more Grand Marnier next time."
+        }, 
+    {
+        "popularity": 7,
+        "user_id": 6,
+        "drink_id": 6,
+        "comment": "Best ever! No sweetening needed. Just be careful, they are very drinkable. Thank you for sharing!!!"
+    }, 
+    {
+        "popularity": 10,
+        "user_id": 7,
+        "drink_id": 7,
+        "comment": "These are made with real liquor!! Not flavored wine or beer or malt beverage. Real vodka, real tequila, and real rum! They are already winning in my book!!"
+        }, 
+    {
+        "popularity": 9,
+        "user_id": 8,
+        "drink_id": 8,
+        "comment": "I didn’t have agave so I added a slice and a squeeze of fresh orange in each glass. Cuts through the tartness for me. Other than that, it’s a hit!"
+    }, 
+    {
+        "popularity": 8,
+        "user_id": 9,
+        "drink_id": 9,
+        "comment": "Excellent drink! I think I will have two more :)."
+        }, 
+    {
+        "popularity": 11,
+        "user_id": 10,
+        "drink_id": 10,
+        "comment": "We loved it! I added 2 tbsp of Maple Syrup to a 2 servings and it taste awesome! Our #1 for this summer."
+    }, 
+];
 
-}
-
-]
+module.exports =
