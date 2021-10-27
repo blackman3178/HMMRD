@@ -1,0 +1,25 @@
+<div class="drink-card">
+  <div class="drink-card-header">
+    {{drink_name}}
+  </div>
+  <div class="card-body">
+    <p>
+      Description:
+      {{description}}
+    </p>
+    <p>
+      Ingredients:
+      {{ingredients}}        
+    </p>
+  </div>
+</div>
+
+
+
+
+{{!--
+// get one drink
+router.get('/drink/:num', async (req, res) => {
+  return res.render('drink', drinks[req.params.num - 1]);
+}); 
+--}}

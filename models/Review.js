@@ -30,6 +30,9 @@ Review.init(
         popularity: {//TODO: do we wanna make this start at zero????
             type: DataTypes.INTEGER,
         },
+        image: {
+            type: DataTypes.STRING,
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
