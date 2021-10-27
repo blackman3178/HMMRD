@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS hmmrd_db;
+CREATE DATABASE hmmrd_db;
