@@ -5,6 +5,11 @@ const withAuth = require('../utils/auth');
 // GET all drink reviews for homepage
 router.get('/', withAuth, async (req, res) => {
     try {
+        const userData = await User.findAll({
+            attributes: { exclude: ['password'] },
+            order: [['name', 'ASC']],
+          });
+
         const dbDrinkData = await Review.findAll({
         include: [
             {
@@ -22,7 +27,7 @@ router.get('/', withAuth, async (req, res) => {
             drinks,
             loggedIn: req.session.loggedIn,
         });
-        console.info(drinks);
+
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
@@ -32,6 +37,11 @@ router.get('/', withAuth, async (req, res) => {
 // GET one drink review for homepage
 router.get('/reviews/:id', withAuth, async (req, res) => {
     try {
+        const userData = await User.findAll({
+            attributes: { exclude: ['password'] },
+            order: [['name', 'ASC']],
+          });
+
         const dbDrinkData = await Review.findByPk(req.params.id, {
         include: [
             {
