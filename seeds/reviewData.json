@@ -58,7 +58,6 @@
         "review": "I love the tart flavor in this drink!. They are spicy, but perfect. Two thumbs up for sure!",
         "popularity": 10,
         "user_id": 10
-    },
-];
+    }
+]
 
-module.exports =

@@ -17,7 +17,7 @@ Comment.init (
             autoIncrement: true,
         },
         comment: {
-            type: dataType.TEXT,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         popularity: {
@@ -53,7 +53,7 @@ Comment.init (
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comment,'
+        modelName: 'comment'
     }
 );
 

@@ -58,7 +58,5 @@
         "user_id": 10,
         "drink_id": 10,
         "comment": "We loved it! I added 2 tbsp of Maple Syrup to a 2 servings and it taste awesome! Our #1 for this summer."
-    }, 
-];
-
-module.exports =
+    }
+]

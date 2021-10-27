@@ -48,8 +48,6 @@
           "username": "oscarwilde",
           "email": "2hot4words@gmail.com",
           "password": "1234"
-    },
-];
-
-module.exports =
+    }
+]
      

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment, Review } = require('../../HMMRD/models');
+const { Comment, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all drink reviews for homepage
@@ -22,6 +22,7 @@ router.get('/', withAuth, async (req, res) => {
             drinks,
             loggedIn: req.session.loggedIn,
         });
+        console.info(drinks);
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
