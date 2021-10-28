@@ -14,7 +14,10 @@ router.post('/login', async (req, res) => {
     }
 
     // Ensure the user entered password matches the stored password for associated username
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await bcrypt.compare(
+      req.body.password,
+      userData.password
+    );
 
     if (!validPassword) {
       res
