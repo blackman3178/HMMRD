@@ -1,27 +1,32 @@
 const router = require('express').Router();
-const { Comment, Review } = require('../models');
+const { Comment, Review, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET all drink reviews for homepage
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        const userData = await User.findAll({
-            attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
-          });
+        // const userData = await User.findAll({
+        //     attributes: { exclude: ['password'] },
+        //     order: [['name', 'ASC']],
+        //   });
 
         const dbDrinkData = await Review.findAll({
         include: [
-            {
-            model: Review,
-            attributes: ['drink_name', 'image', 'review'],
-            },
+            User,
+            // {
+            // // model: Review,
+            // include: ['drink_name', 'review'],
+            // },
         ],
         });
+
+        // console.log(dbDrinkData);
 
         const drinks = dbDrinkData.map((drink) =>
         drink.get({ plain: true })
         );
+
+        console.log(drinks);
 
         res.status(200).render('homepage', {
             drinks,
@@ -35,7 +40,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 // GET one drink review for homepage
-router.get('/reviews/:id', withAuth, async (req, res) => {
+router.get('/reviews/:id', async (req, res) => {
     try {
         const userData = await User.findAll({
             attributes: { exclude: ['password'] },
