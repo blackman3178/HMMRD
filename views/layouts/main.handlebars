@@ -2,40 +2,37 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HMMRD</title>
-<link rel="stylesheet" type="text/css" href="../../public/css/jass.css">
-<link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HMMRD!</title>
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
-<header>
-    <h1>Let's Get HMMRD!!!</h1>
-</header>
-<nav>
+  <header>
+    <h1>HMMRD!</h1>
+  </header>
+  <nav>
     <a href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
-</nav>
-<main>
+  </nav>
+  <main>
     <aside>
-    <h2>Whatcha Drinking?</h2>
-    <div class="form-group">
-        <label for="cocktail-search">Search:</label>
-        <input class="form-input" type="text" id="drink-search" />
-    </div>
+      <h2>Search for your drink</h2>
     </aside>
     <div class="gallery">
-    {{{body}}}
+      {{{body}}}
     </div>
-</main>
-{{#if loggedIn}}
-<script src="../../../HMMRD/public/js/logout.js"></script>
-{{/if}}
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  {{/if}}
 </body>
 
 </html>

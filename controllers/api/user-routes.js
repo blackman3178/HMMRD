@@ -4,7 +4,7 @@ const { User } = require('../../models');
 router.post('/login', async (req, res) => {
   try {
     // Finding the user from the posted user_name
-    const userData = await User.findOne({ where: { username: req.body.username } });
+    const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
@@ -13,11 +13,13 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // Ensure the user entered password matches the stored password for associated username
-    const validPassword = await bcrypt.compare(
-      req.body.password,
-      userData.password
-    );
+    // // Ensure the user entered password matches the stored password for associated username
+    // const validPassword = await bcrypt.compare(
+    //   req.body.password,
+    //   userData.password
+    // );
+
+    const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res

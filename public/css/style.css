@@ -34,6 +34,11 @@
     background: var(--primary);
     color: var(--light);
   }
+
+  .header-img {
+    width: 100%; 
+    
+  }
   
   main {
     display: flex;
