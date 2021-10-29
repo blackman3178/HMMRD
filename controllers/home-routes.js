@@ -74,6 +74,25 @@ router.get('/reviews/:id', async (req, res) => {
     }
 });
 
+router.get("/reviews/name", async (req, res) => {
+    try {
+        const reviewData = await Review.findAll({
+            where: {
+                drink_name: req.body.title,
+            },
+            order: [['popularity', 'ASC']],
+        });
+        const reviews = reviewData.map((review) => review.get({ plain: true }));
+
+        res.status(200).render('homepage',{
+            reviews,
+            logged_in: req.session.logged_in,
+        });
+    }catch(err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');
