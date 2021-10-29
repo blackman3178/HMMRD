@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 
         res.status(200).render('homepage', {
             drinks,
-            loggedIn: req.session.loggedIn,
+            logged_in: req.session.logged_in,
         });
 
     } catch (err) {
@@ -66,7 +66,7 @@ router.get('/reviews/:id', async (req, res) => {
   
         res.status(200).render('ctreviews-details', {
             drinkReviews,
-            loggedIn: req.session.loggedIn,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         console.log(err);
@@ -75,7 +75,7 @@ router.get('/reviews/:id', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
+    if (req.session.logged_in) {
         res.redirect('/');
         return;
     }
