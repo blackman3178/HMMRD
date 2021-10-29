@@ -1,3 +1,26 @@
-{{#each galleries as |gallery|}}
-{{> gallery-details}}
+{{#each drinks}}
+<div class="card">
+  <div class="card header">
+    {{drink_name}}
+  </div>
+  <div class="card-body">
+    <p>
+      {{review}}
+    </p>
+  </div>
+</div>
+
+
+    {{!-- <div>
+      <p>
+        {{user_id}}.
+        {{drink_name}}
+      </p>
+    </div> --}}
+
+    {{!-- <div>
+      <p>
+        {{review}}
+      </p>
+    </div> --}}
 {{/each}}

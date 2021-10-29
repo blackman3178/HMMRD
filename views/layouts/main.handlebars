@@ -15,8 +15,8 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+    {{#if logged_in}}
+    <button id="logout" class="">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
@@ -24,12 +24,16 @@
   <main>
     <aside>
       <h2>Search for your drink</h2>
+      <div class="form-group">
+        <label for="drink-choice">Drink:</label>
+        <input class="form-input" type="text" id="drink-choice"/>
+      </div>
     </aside>
     <div class="gallery">
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   {{/if}}
