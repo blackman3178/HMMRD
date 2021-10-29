@@ -11,7 +11,7 @@ Review.belongsTo(User, {
       onDelete: "CASCADE"
   });
   Comment.belongsTo(User, {
-      foreignKey: 'userId',
+      foreignKey: 'user_id',
       onDelete: "CASCADE"
   });
 
