@@ -45,15 +45,14 @@ router.get('/new', withAuth, (req, res) => {
   });
 
 // GET one drink review for homepage
-router.get('/reviews/:id', async (req, res) => {
+router.get('/reviews/:id', withAuth, async (req, res) => {
     try {
-        const userData = await User.findAll({
-            attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
-          });
 
         const dbDrinkData = await Review.findByPk(req.params.id, {
         include: [
+            {
+                model: User,
+            },
             {
             model: Comment,
             attributes: [
@@ -68,11 +67,9 @@ router.get('/reviews/:id', async (req, res) => {
         });
   
         const drinkReviews = dbDrinkData.get({ plain: true });
-  
-        res.status(200).render('ctreviews-details', {
-            drinkReviews,
-            logged_in: req.session.logged_in,
-        });
+        console.log(drinkReviews);
+        
+        res.status(200).render('single-review',{ drinkReviews } );
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
