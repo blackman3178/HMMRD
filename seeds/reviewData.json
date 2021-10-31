@@ -1,6 +1,6 @@
 [
     {
-        "drink_name": "Spicy Marg",
+        "drink_name": "Margarita",
         "review": "These are sipping cocktails for sure and will 100% make you forget whatever is bothering you. Cheers to that!",
         "popularity": 4,
         "user_id": 1
@@ -18,7 +18,7 @@
         "user_id": 3
     },
     {
-        "drink_name": "Whisky Sour",
+        "drink_name": "Gin Sour",
         "review": "I almost cried I loved it so much. And then I did cry when my drink was empty!",
         "popularity": 10,
         "user_id": 4
@@ -30,31 +30,31 @@
         "user_id": 5
     },
     {
-        "drink_name": "Farmer's Cocktail",
+        "drink_name": "Tom Collins",
         "review": "I honestly feel like the Cliff's drink is the perfect addition to a party.",
         "popularity": 4,
         "user_id": 6
     },
     {
-        "drink_name": "Vodka Gimlet",
+        "drink_name": "Paloma",
         "review": "YESSSS! All the yes for this one!",
         "popularity": 9,
         "user_id": 7
     },
     {
-        "drink_name": "Hairy Navel",
+        "drink_name": "Mai Tai",
         "review": "These are sipping cocktails for sure and will 100% make you forget whatever is bothering you. Cheers to that!",
         "popularity": 5,
         "user_id": 8
     },
     {
-        "drink_name": "Miss Elena",
+        "drink_name": "Bellini",
         "review": "This was a surprisingly good drink! Very refreshing.",
         "popularity": 4,
         "user_id": 9
     },
     {
-        "drink_name": "Spicy Marg",
+        "drink_name": "Bloody Mary",
         "review": "I love the tart flavor in this drink!. They are spicy, but perfect. Two thumbs up for sure!",
         "popularity": 10,
         "user_id": 10
