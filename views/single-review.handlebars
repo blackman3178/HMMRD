@@ -7,6 +7,12 @@
       </div>
     </div>
     <div class="card-body">
+    {{#if drinkReviews.image}}
+    <img class="reviewCardImage" src="{{drinkReviews.image}}" alt="Image of {{drinkReviews.drink_name}}">
+    {{else}}
+    <img class="reviewCardImage" src="../public/images/hmmrdlight.png" alt="Image of {{drinkReviews.drink_name}}">
+    {{/if}}
+    <br>
       {{drinkReviews.review}}
     </div>
   </article>

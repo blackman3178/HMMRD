@@ -1,27 +1,17 @@
 {{#each drinks}}
 <div class="card" >
   <div class="card header">
-    <img src="{{image}}" alt="Image of {{drink_name}}">
-    <a href ="/reviews/{{id}}">{{drink_name}}</a>
+    <a class="card-body" href ="/reviews/{{id}}">{{drink_name}}</a>
   </div>
   <div class="card-body">
+    {{#if image}}
+    <img src="{{image}}" alt="Image of {{drink_name}}">
+    {{else}}
+    <img src="../public/images/hmmrdlight.png" alt="Image of {{drink_name}}">
+    {{/if}}
     <p>
       {{review}}
     </p>
   </div>
 </div>
-
-
-    {{!-- <div>
-      <p>
-        {{user_id}}.
-        {{drink_name}}
-      </p>
-    </div> --}}
-
-    {{!-- <div>
-      <p>
-        {{review}}
-      </p>
-    </div> --}}
 {{/each}}
