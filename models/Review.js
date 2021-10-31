@@ -44,12 +44,10 @@ Review.init(
     {
         hooks: { //TODO: tried to use hooks to create logic to make review 0 or not!!!
             beforeCreate: async (newReviewData)=> {
-                if(newReviewData.popularity !== 0){
-                    return newReviewData;
-                } else {
+                if(newReviewData.popularity !== (0)){
                     newReviewData.popularity = 0;
                     return newReviewData;
-                }
+                } 
             },
         },
         sequelize,
