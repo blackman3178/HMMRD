@@ -2,7 +2,7 @@
     --primary: #910000;
     --secondary:#918e8e;
     --tertiary: #2e2e2e;
-    --quatrinary: #6c6b67;
+    --quaternary: #6c6b67;
     --light: #e3e4e3;
     --dark: #182c23;
     --error: rgb(228, 46, 1);
@@ -16,7 +16,7 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--quaternary);
   }
   
   a {
