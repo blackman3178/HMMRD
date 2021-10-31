@@ -38,6 +38,11 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+router.get('/new', withAuth, (req, res) => {
+    res.render('new-review', {
+      layout: 'main',
+    });
+  });
 
 // GET one drink review for homepage
 router.get('/reviews/:id', async (req, res) => {
