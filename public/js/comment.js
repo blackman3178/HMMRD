@@ -1,20 +1,22 @@
 const commentFormHandler = async function(event) {
     event.preventDefault();
   
-    const drink_Id = document.querySelector('input[name="post-id"]').value;
+    const drink_id = document.querySelector('.inputDrinkId').value;
     const comment = document.querySelector('textarea[name="comment-body"]').value;
   
-    if (body) {
+  
+    if (comment) {
       await fetch('/api/comment', {
         method: 'POST',
         body: JSON.stringify({
-          drink_Id,
+          drink_id,
           comment
         }),
         headers: {
           'Content-Type': 'application/json'
         }
       });
+      console.log("HERE IS A CONSOLE LOG!!!!", drink_id);
   
       document.location.reload();
     }

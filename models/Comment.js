@@ -42,11 +42,9 @@ Comment.init (
         hooks: {
             beforeCreate: async (newCommentData)=> {
                 if(newCommentData.popularity !== 0){
-                    return newCommentData;
-                } else {
                     newCommentData.popularity = 0;
                     return newCommentData;
-                }
+                } 
             },
         },
         sequelize,
