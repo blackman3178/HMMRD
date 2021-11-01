@@ -4,7 +4,7 @@
     --tertiary: #2e2e2e;
     --quatrinary: #6c6b67;
     --light: #e3e4e3;
-    --dark: #182c23;
+    --dark: #2e2e2e;
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
   }
@@ -141,6 +141,7 @@
     background-color: var(--tertiary);
     padding: 0.625rem;
     border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+    text-align: center;
   }
   
   .card-body {
