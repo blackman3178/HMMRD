@@ -53,7 +53,7 @@ module.exports = router;
 //                    console.log(drink.strDrinkThumb);
 //                    return "../../public/images/hmmrdlight.png";
 //             }
-//         });
+//         });   
 //     }else {
 //         const newDrink = {
 //             img:"../../public/images/hmmrdlight.png"

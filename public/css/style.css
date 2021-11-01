@@ -168,4 +168,8 @@
     align-content: flex-start;
     align-items: center;
   }
+
+  .reviewCardImage {
+    height: 200px;
+  }
   
