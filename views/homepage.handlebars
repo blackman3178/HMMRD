@@ -1,13 +1,13 @@
 {{#each drinks}}
 <div class="card" >
-  <div class="card header">
+  <div class="card header text-center ">
     <a class="card-body" href ="/reviews/{{id}}">{{drink_name}}</a>
   </div>
   <div class="card-body">
     {{#if image}}
     <img src="{{image}}" alt="Image of {{drink_name}}">
     {{else}}
-    <img src="../public/images/hmmrdlight.png" alt="Image of {{drink_name}}">
+    <img src="../images/hmmrddark.png" alt="Image of {{drink_name}}">
     {{/if}}
     <p>
       {{review}}
