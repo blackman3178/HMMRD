@@ -6,7 +6,7 @@ const apiRoutes = require('./apiRoutes');
 const commentRoutes = require("./commentRoutes");
 
 router.use('/users', userRoutes);
-router.use('/', apiRoutes)
+router.use('/api', apiRoutes);
 router.use('/review',reviewRoutes);
 router.use('/comment', commentRoutes);
 
