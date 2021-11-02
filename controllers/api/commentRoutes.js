@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Comment } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+// Route designed for when a user wants to add a new comment to an existing review
+router.post('/', withAuth, async (req, res) => {
   try {
     const newComment = await Comment.create({
       ...req.body,

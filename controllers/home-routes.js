@@ -5,22 +5,11 @@ const withAuth = require('../utils/auth');
 // GET all drink reviews for homepage
 router.get('/', async (req, res) => {
     try {
-        // const userData = await User.findAll({
-        //     attributes: { exclude: ['password'] },
-        //     order: [['name', 'ASC']],
-        //   });
-
         const dbDrinkData = await Review.findAll({
         include: [
             User,
-            // {
-            // // model: Review,
-            // include: ['drink_name', 'review'],
-            // },
         ],
         });
-
-        // console.log(dbDrinkData);
 
         const drinks = dbDrinkData.map((drink) =>
         drink.get({ plain: true })
@@ -76,25 +65,7 @@ router.get('/reviews/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get("/reviews/name", async (req, res) => {
-    try {
-        const reviewData = await Review.findAll({
-            where: {
-                drink_name: req.body.title,
-            },
-            order: [['popularity', 'ASC']],
-        });
-        const reviews = reviewData.map((review) => review.get({ plain: true }));
-
-        res.status(200).render('homepage',{
-            reviews,
-            logged_in: req.session.logged_in,
-        });
-    }catch(err) {
-        res.status(500).json(err);
-    }
-})
-
+// Checks if a user is already logged in and returns them to homepage if true
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/');

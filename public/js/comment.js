@@ -4,7 +4,7 @@ const commentFormHandler = async function(event) {
     const drink_id = document.querySelector('.inputDrinkId').value;
     const comment = document.querySelector('textarea[name="comment-body"]').value;
   
-  
+    // Brings a new comments back to the current page
     if (comment) {
       await fetch('/api/comment', {
         method: 'POST',

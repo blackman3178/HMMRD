@@ -1,3 +1,4 @@
+// Opens to a new page when user request to input a new review of a drink
 const newFormHandler = async function(event) {
     event.preventDefault();
   
