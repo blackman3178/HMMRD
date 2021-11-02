@@ -1,3 +1,4 @@
+// Allows user to login if they have valid credentials
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -19,6 +20,7 @@ const loginFormHandler = async (event) => {
     }
   };
   
+  // Allows user to sign-up to interact with site
   const signupFormHandler = async (event) => {
     event.preventDefault();
   

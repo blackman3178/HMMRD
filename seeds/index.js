@@ -14,11 +14,13 @@ const seedDataBase = async () => {
     individualHooks: true,
     returning: true,
   });
+
   console.log("THIS IS REVIEW DAta");
   await Review.bulkCreate(reviewData, {
     individualHooks: true,
     returning: true,
   });
+  
   console.log("THIS IS COMMENT DATA");
   await Comment.bulkCreate(commentData, {
     individualHooks: true,

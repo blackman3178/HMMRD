@@ -34,6 +34,8 @@ Then I am presented with a way to add comments for that drink review
 
 The user will go to our app. In the left hand corner, they will be able to login. If the are a new user, they will need to sign up. Once logged in, they will then be shown populated drinks. The user will find a drink they are interested in and click on the title. They are taken to a page with the chosen drink. They will be able to review comments and add their own comments. If they are unable to find the drink they want, they can then search a drink in the Create New Drink review box this drink will be added to the main page as a populated drink and then they will be able to add additional comments if they want or the next user will be able to see this drink and make their review.  
 
+## Mock-UP
+![Photo of Main Homepage of website](./public/images/hmmrd-screenshot.png)
 ## Getting Started
 You will need to clone the github repository and then run npm install. 
 Run `npm run seed` to seed data to your database so that you can test your routes.
@@ -57,3 +59,6 @@ Noah Blackburn
 Ludude Lubin
 Dwight Kornbluth
 Tammy Gagliano
+
+## Project Links:
+Github Repository Link:     https://github.com/blackman3178/HMMRD.git

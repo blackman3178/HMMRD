@@ -28,7 +28,7 @@ Review.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        popularity: {//TODO: do we wanna make this start at zero????
+        popularity: {
             type: DataTypes.INTEGER,
         },
         image: {
